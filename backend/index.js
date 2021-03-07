@@ -1,5 +1,10 @@
 const exprees = require('express');
 const app = exprees();
+
+//cors
+const cors = require('cors');
+app.use(cors());
+
 //dot env
 const env = require('dotenv');
 env.config({path:'./config/key.env'})

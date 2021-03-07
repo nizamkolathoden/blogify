@@ -19,7 +19,7 @@ router.post("/login",(req,res)=>{
     if(!userName||!password) 
    return res.status(401).json({error:"please enter userName and password"});
     User.findOne({userName}).then(savedUser=>{
-        console.log(savedUser);
+        // console.log(savedUser);
         //401
         if(!savedUser) 
         return res.status(401).json({error:'wrong usernam & password'});
